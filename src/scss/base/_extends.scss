@@ -1,3 +1,63 @@
-@use 'variables';
+@use './variables';
 
+%h1-text {
+    font-family: "PlayfairDisplay", serif;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 60px;
+    color: variables.$first-text-color;
+}
 
+%h2-text {
+    font-family: "PlayfairDisplay", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 43px;
+    color: variables.$first-text-color;
+}
+
+%h3-text {
+    font-family: "PlayfairDisplay", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: rgba(27, 26, 23, 0.82);
+}
+
+%paragraph-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: variables.$footer-color;
+}
+
+%footer-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+%footer-title {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+%nav-text {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: variables.$nav-text-color;
+}

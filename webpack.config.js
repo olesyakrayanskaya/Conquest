@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const ghpages = require('gh-pages');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 ghpages.publish('dist', function (err) { });
 
@@ -46,6 +47,7 @@ module.exports = {
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html',
         }),
+        new FaviconsWebpackPlugin('./src/images/Ellipse.ico'),
         new FileManagerPlugin({
             events: {
                 onEnd: {
