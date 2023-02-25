@@ -97,6 +97,10 @@
             color: #b6b2b2;
             transition: all 0.5s linear;
         }
+
+        &_light {
+            background-color: variables.$accent-color;
+        }
     }
 
     &__inner-right {
