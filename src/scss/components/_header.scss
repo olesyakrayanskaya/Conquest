@@ -1,4 +1,9 @@
+@use '../base/variables';
+
 .header {
+
+    background-color: variables.$main-bcg-color;
+
     &__inner {
         display: flex;
         flex-direction: row;
