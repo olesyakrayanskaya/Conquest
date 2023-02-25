@@ -1,0 +1,115 @@
+@use "../base/variables";
+@use "../base/extends";
+
+.popular-models {
+    padding-top: 50px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        @extend %h2-text;
+    }
+
+    &__all {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #444240;
+        padding-bottom: 11px;
+        border-bottom: 1px solid #c4c0b6;
+        align-self: flex-end;
+
+        &:hover {
+            color: #2b1e66;
+            border-bottom: 1px solid #2b1e66;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 370px;
+        height: 467px;
+        margin: 20px 0;
+        background-color: variables.$main-bcg-color;
+
+        &:nth-child(2) {
+            margin: 20px 30px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    &__brand {
+        @extend %h3-text;
+    }
+
+    &__price {
+        font-family: "Prata", serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(27, 26, 23, 0.82);
+    }
+
+    &__detail {
+        font-family: "PlayfairDisplay", serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: variables.$first-text-color;
+        position: relative;
+        margin-bottom: 40px;
+        margin-left: 88px;
+        margin-top: 20px;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 1px;
+            background-color: variables.$first-text-color;
+            bottom: 45%;
+            left: -50px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+
+    &__img {
+        width: 313px;
+        height: 313px;
+        border-radius: 50%;
+        background-image: url("images/border-ellipse.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-left: 30px;
+    }
+}
