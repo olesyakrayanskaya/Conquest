@@ -1,3 +1,4 @@
+@use '../base/variables';
 @use '../base/extends';
 
 .menu {
@@ -15,5 +16,12 @@
 
     &__link {
         @extend %nav-text;
+
+        &:hover {
+            color: #0a0202;
+            font-size: 16px;
+            text-decoration: underline;
+            transition: all 0.5s linear;
+        }
     }
 }
