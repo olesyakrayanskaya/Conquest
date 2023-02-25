@@ -1,0 +1,19 @@
+@use '../base/extends';
+
+.menu {
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin: 5px 32px 15px;
+    }
+
+    &__link {
+        @extend %nav-text;
+    }
+}

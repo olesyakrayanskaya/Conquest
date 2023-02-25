@@ -1,0 +1,22 @@
+.header {
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0;
+        flex-wrap: wrap;
+
+        @media (max-width: 750px) {
+            justify-content: center;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 99px;
+    }
+}
