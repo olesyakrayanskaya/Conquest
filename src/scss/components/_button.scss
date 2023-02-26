@@ -1,0 +1,30 @@
+@use "../base/variables";
+@use "../base/extends";
+
+.btn {
+    width: 205px;
+    height: 64px;
+    background-color: variables.$footer-color;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #1b1a19;
+        color: #b6b2b2;
+        transition: all 0.5s linear;
+    }
+
+    &_light {
+        background-color: variables.$accent-color;
+    }
+
+}
