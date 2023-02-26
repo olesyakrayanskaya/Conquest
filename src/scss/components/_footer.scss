@@ -1,0 +1,63 @@
+@use '../base/variables';
+@use '../base/extends';
+
+.footer {
+    background-color: variables.$footer-color;
+    @extend %footer-text;
+    padding: 79px 0 67px;
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        
+        @media (max-width: 400px) {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__logo {
+        margin-bottom: 23px;
+    }
+
+    &__mail {
+        margin-top: 15px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media (max-width: 400px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item {
+        @extend .footer__contacts;
+        margin: 10px;
+
+        @media (max-width: 400px) {
+            margin: 40px 0;
+        }
+    }
+
+    &__subtitle {
+        @extend %footer-title;
+        margin-bottom: 18px;
+    }
+
+    &__text {
+        margin-top: 15px;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+}
