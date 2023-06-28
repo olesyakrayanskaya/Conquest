@@ -11,7 +11,10 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 ghpages.publish('dist', function (err) { });
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    entry: {
+        'index': path.resolve(__dirname, 'src', 'index.js'),
+        'slider': path.resolve(__dirname, 'src', './js/slider.js')
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index.[contenthash].js',
@@ -46,6 +49,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html',
+            chunks: ['index', 'slider'],
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src', 'catalog.html'),
+            filename: 'catalog.html',
+            chunks: ['index'],
         }),
         new FaviconsWebpackPlugin('./src/images/Ellipse.ico'),
         new FileManagerPlugin({
