@@ -13,7 +13,8 @@ ghpages.publish('dist', function (err) { });
 module.exports = {
     entry: {
         'index': path.resolve(__dirname, 'src', 'index.js'),
-        'slider': path.resolve(__dirname, 'src', './js/slider.js')
+        'slider': path.resolve(__dirname, 'src', './js/slider.js'),
+        'details': path.resolve(__dirname, 'src', './js/details.js')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -49,12 +50,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html',
-            chunks: ['index', 'slider'],
+            chunks: ['index', 'slider', 'details'],
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'catalog.html'),
             filename: 'catalog.html',
-            chunks: ['index'],
+            chunks: ['index', 'details'],
         }),
         new FaviconsWebpackPlugin('./src/images/Ellipse.ico'),
         new FileManagerPlugin({
