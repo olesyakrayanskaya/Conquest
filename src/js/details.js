@@ -1,7 +1,6 @@
 const detailLink = document.querySelectorAll('.catalog__detail, .popular-models__detail');
 const detailClose = document.querySelectorAll('.details__close');
 const modal = document.querySelectorAll('.catalog__modal, .popular-models__modal');
-// const modalPopular = document.querySelectorAll('.popular-models__modal');
 
 detailLink.forEach((link) => {
     link.addEventListener('click', () => {
@@ -30,14 +29,3 @@ modal.forEach((mod) => {
         } else { m.style.transform = 'translateY(0)'; }
     });
 });
-
-// modalPopular.forEach((mod) => {
-//     window.addEventListener('scroll', () => {
-//         const scrollTop = window.scrollY;
-//         const windowHeight = document.documentElement.clientHeight;
-//         const m = mod;
-//         if (scrollTop >= (windowHeight / 4)) {
-//             m.style.transform = `translateY(${scrollTop + 150}px)`;
-//         } else { m.style.transform = 'translateY(0)'; }
-//     });
-// });
