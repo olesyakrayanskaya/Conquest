@@ -1,13 +1,14 @@
-const detailLink = document.querySelectorAll('.catalog__detail');
+const detailLink = document.querySelectorAll('.catalog__detail, .popular-models__detail');
 const detailClose = document.querySelectorAll('.details__close');
-const modal = document.querySelectorAll('.catalog__modal');
+const modal = document.querySelectorAll('.catalog__modal, .popular-models__modal');
+// const modalPopular = document.querySelectorAll('.popular-models__modal');
 
 detailLink.forEach((link) => {
     link.addEventListener('click', () => {
-        link.closest('.catalog__item').querySelector('.details').classList.add('visible');
+        link.closest('.catalog__item, .popular-models__item').querySelector('.details').classList.add('visible');
         window.addEventListener('click', (event) => {
-            if (!event.target.closest('.catalog__modal') && event.target !== link) {
-                link.closest('.catalog__item').querySelector('.details').classList.remove('visible');
+            if (!event.target.closest('.catalog__modal, .popular-models__modal') && event.target !== link) {
+                link.closest('.catalog__item, .popular-models__item').querySelector('.details').classList.remove('visible');
             }
         });
     });
@@ -15,7 +16,7 @@ detailLink.forEach((link) => {
 
 detailClose.forEach((close) => {
     close.addEventListener('click', () => {
-        close.closest('.catalog__item').querySelector('.details').classList.remove('visible');
+        close.closest('.catalog__item, .popular-models__item').querySelector('.details').classList.remove('visible');
     });
 });
 
@@ -29,3 +30,14 @@ modal.forEach((mod) => {
         } else { m.style.transform = 'translateY(0)'; }
     });
 });
+
+// modalPopular.forEach((mod) => {
+//     window.addEventListener('scroll', () => {
+//         const scrollTop = window.scrollY;
+//         const windowHeight = document.documentElement.clientHeight;
+//         const m = mod;
+//         if (scrollTop >= (windowHeight / 4)) {
+//             m.style.transform = `translateY(${scrollTop + 150}px)`;
+//         } else { m.style.transform = 'translateY(0)'; }
+//     });
+// });
